@@ -387,5 +387,5 @@ a.contact__item:hover {
   font-weight: 700;
   margin-bottom: var(--space-8);
   color: var(--color-text);
-  text-align: center;
+  text-align: left;
 }
