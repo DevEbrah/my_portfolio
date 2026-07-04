@@ -14,6 +14,18 @@
     <meta name="author" content="Hibrahim Onyango" />
     <meta name="robots" content="index, follow" />
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Dev Ebrah | Full-Stack Developer & Systems Engineer" />
+    <meta property="og:description"
+        content="Get in touch with Dev Ebrah — available for freelance projects and full-time opportunities." />
+    <meta property="og:url" content="https://devebrah.github.io/my_portfolio/contact.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Dev Ebrah" />
+    <meta name="twitter:description" content="Get in touch — available for freelance and full-time opportunities." />
+
     <title>Dev Ebrah | Full-Stack Developer, Network & Systems Administrator</title>
 
     <!-- Favicon — replace with your actual logo file -->
@@ -51,12 +63,16 @@
                 Dev<span class="accent">Ebrah</span>
             </a>
             <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#skills">Skills</a></li>
                 <!-- <li><a href="index.html#projects">Projects</a></li> -->
                 <li><a href="index.html#experience">Experience</a></li>
             </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -73,33 +89,6 @@
                 </p>
             </div>
             <div class="contact__grid">
-
-                <div class="contact__info">
-                    <p class="contact__note">
-                        Not sure if I'm the right fit? No problem — reach out anyway. I'm always happy to help point you
-                        in the
-                        right direction.
-                    </p>
-                    <div class="contact__details">
-                        <a href="mailto:onyangohibrahim0@gmail.com" class="contact__item">
-                            <span class="contact__item-icon">📧</span>
-                            <span>onyangohibrahim0@gmail.com</span>
-                        </a>
-                        <a href="https://github.com/DevEbrah" target="_blank" rel="noopener" class="contact__item">
-                            <span class="contact__item-icon">💼</span>
-                            <span>github.com/DevEbrah</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/hibrahim-onyango-a076531a8" target="_blank" rel="noopener"
-                            class="contact__item">
-                            <span class="contact__item-icon">🔗</span>
-                            <span>LinkedIn — Hibrahim Onyango</span>
-                        </a>
-                        <div class="contact__item">
-                            <span class="contact__item-icon">📍</span>
-                            <span>Nairobi, Kenya — available remotely and on-site</span>
-                        </div>
-                    </div>
-                </div>
 
                 <form class="contact__form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="135e5343-515e-4d65-9bc4-d764f9ca27cb" />
@@ -123,9 +112,41 @@
                         <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
                             required></textarea>
                     </div>
-                    <div class="h-captcha" data-captcha="true"></div>
+                    <div style="display: flex; justify-content: center; margin-block: 1rem;">
+                        <div class="h-captcha" data-captcha="true"></div>
+                    </div>
                     <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+
+                    <!-- Contact details sit below the button inside the form column -->
+                    <div class="contact__details"
+                        style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--color-border);">
+                        <a href="mailto:onyangohibrahim0@gmail.com" class="contact__item">
+                            <span class="contact__item-icon">📧</span>
+                            <span>onyangohibrahim0@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/DevEbrah" target="_blank" rel="noopener" class="contact__item">
+                            <span class="contact__item-icon">💼</span>
+                            <span>github.com/DevEbrah</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hibrahim-onyango-a076531a8" target="_blank" rel="noopener"
+                            class="contact__item">
+                            <span class="contact__item-icon">🔗</span>
+                            <span>LinkedIn — Hibrahim Onyango</span>
+                        </a>
+                        <div class="contact__item">
+                            <span class="contact__item-icon">📍</span>
+                            <span>Nairobi, Kenya — available remotely and on-site</span>
+                        </div>
+                    </div>
                 </form>
+
+                <div class="contact__info">
+                    <p class="contact__note">
+                        Not sure if I'm the right fit? No problem — reach out anyway. I'm always happy to help point you
+                        in the
+                        right direction.
+                    </p>
+                </div>
 
             </div>
         </div>

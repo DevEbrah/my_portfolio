@@ -82,6 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // Captcha validation — check if hCaptcha was completed
+      const captchaResponse = form.querySelector('[name="h-captcha-response"]');
+      if (!captchaResponse || !captchaResponse.value) {
+        showFormFeedback(form, 'Please complete the captcha before sending.', 'error');
+        return;
+      }
+
       // Show loading state
       btn.textContent = 'Sending...';
       btn.disabled = true;
@@ -103,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = await response.json();
 
         if (result.success) {
-          showFormFeedback(form, "Message sent! Thank you for reaching out! I'll get back to you as soon as possible!", 'success');
+          showFormFeedback(form, "✅ Message sent! Thank you for reaching out — I'll get back to you as soon as possible!", 'success');
           form.reset();
         } else {
           showFormFeedback(form, result.message || 'Something went wrong. Please try again.', 'error');
@@ -117,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
+  
   // ---- FORM FEEDBACK HELPER ----
   function showFormFeedback(form, message, type) {
     let feedback = form.querySelector('.form-feedback');
@@ -164,25 +171,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---- SCROLLBAR TRAIL EFFECT ----
-  const style = document.createElement('style');
-  document.head.appendChild(style);
+const style = document.createElement('style');
+document.head.appendChild(style);
 
-  let lastScrollY = window.scrollY;
-  let scrollTimeout;
+let lastScrollY = window.scrollY;
+let scrollTimeout;
 
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    const scrollingDown = currentScrollY > lastScrollY;
-    lastScrollY = currentScrollY;
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const scrollingDown = currentScrollY > lastScrollY;
+  lastScrollY = currentScrollY;
 
-    // Gradient flips based on direction
-    // Scrolling down — trail fades upward (transparent at top)
-    // Scrolling up — trail fades downward (transparent at bottom)
-    const gradient = scrollingDown
-      ? `linear-gradient(to bottom, transparent, var(--color-accent), var(--color-accent))`
-      : `linear-gradient(to top, transparent, var(--color-accent), var(--color-accent))`;
+  // Gradient flips based on direction
+  // Scrolling down — trail fades upward (transparent at top)
+  // Scrolling up — trail fades downward (transparent at bottom)
+  const gradient = scrollingDown
+    ? `linear-gradient(to bottom, transparent, var(--color-accent), var(--color-accent))`
+    : `linear-gradient(to top, transparent, var(--color-accent), var(--color-accent))`;
 
-    style.textContent = `
+  style.textContent = `
       ::-webkit-scrollbar-thumb {
         background: ${gradient};
         border-radius: 9999px;
@@ -194,10 +201,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     `;
 
-    // Fade back to resting state when scrolling stops
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      style.textContent = `
+  // Fade back to resting state when scrolling stops
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    style.textContent = `
         ::-webkit-scrollbar-thumb {
           background: var(--color-accent);
           border-radius: 9999px;
@@ -206,6 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
             0 0 12px rgba(255, 69, 0, 0.4);
         }
       `;
-    }, 150);
+  }, 150);
 
-  }, { passive: true });
+}, { passive: true });
