@@ -387,3 +387,12 @@
   margin-bottom: var(--space-4);
   animation: accentPulse 1.5s ease-in-out infinite;
 }
+
+/* ---- FORM FEEDBACK ---- */
+#formFeedback {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  min-height: 0;
+  transition: all var(--transition-base);
+}

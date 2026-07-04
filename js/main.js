@@ -138,9 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- FORM FEEDBACK HELPER ----
   function showFormFeedback(form, message, type) {
-    let feedback = form.querySelector('.form-feedback');
+    let feedback = document.getElementById('formFeedback');
     if (!feedback) {
-      feedback = document.createElement('div');
+      feedback = form.querySelector('.form-feedback');
+    }
+    if (!feedback) {
+      feedback = document.createElement('p');
       feedback.className = 'form-feedback';
       form.appendChild(feedback);
     }
