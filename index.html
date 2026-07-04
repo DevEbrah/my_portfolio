@@ -6,6 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Dev Ebrah — Full-Stack Developer & Systems Engineer based in Nairobi, Kenya. Building systems that simplify life." />
+
+  <!-- Primary SEO -->
+  <meta name="keywords"
+    content="Dev Ebrah, Full Stack Developer Nairobi, Systems Engineer Kenya, Web Developer Nairobi, Freelance Developer Kenya, Hibrahim Onyango" />
+  <meta name="author" content="Hibrahim Onyango" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dev Ebrah | Full-Stack Developer & Systems Engineer" />
+  <meta property="og:description"
+    content="I build web applications, automation tools, and the infrastructure that keeps them running. Based in Nairobi, Kenya." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:url" content="https://devebrah.github.io/portfolio" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dev Ebrah | Full-Stack Developer & Systems Engineer" />
+  <meta name="twitter:description" content="Building systems that simplify life. Based in Nairobi, Kenya." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+
   <title>Dev Ebrah | Full-Stack Developer, Network & Systems Administrator</title>
 
   <!-- Favicon — replace with your actual logo file -->
@@ -76,10 +97,12 @@
           <a href="#contact" class="btn btn--outline">Let's Work Together</a>
         </div>
         <p class="hero__availability">
-          <span class="badge badge--available">Available</span>
-
           I'm open to freelance projects, collaborations, and full-time opportunities — especially anything at the
           intersection of development and systems.
+        </p>
+        <br>
+        <p class="hero__availability">
+          <span class="badge badge--available">Available</span>
         </p>
       </div>
       <div class="hero__visual">
@@ -117,7 +140,6 @@
   <section class="section about" id="about">
     <div class="container">
       <div class="section__header">
-        <p class="section__eyebrow">Who I Am</p>
         <h2 class="section__title">About Me</h2>
       </div>
       <div class="about__grid">
@@ -144,11 +166,11 @@
             found my strength at the intersection of both worlds — building applications that are both functional and
             operationally sound.
           </p>
-          <p>
+          <!-- <p>
             I'm also the founder and CEO of <strong>Springs Continuum</strong> — a technology company focused on systems
             thinking. The company is built on one principle: <em>reduce friction, improve flow, and design systems that
               work together more efficiently.</em>
-          </p>
+          </p> -->
           <div class="about__facts">
             <div class="fact">
               <span class="fact__icon">⚙️</span>
@@ -244,10 +266,12 @@
           <div class="skills__tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">C</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">PHP</span>
             <span class="skill-tag">HTML5</span>
             <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">MySQL</span>
             <span class="skill-tag">Bash</span>
             <span class="skill-tag">REST APIs</span>
             <span class="skill-tag">Git & GitHub</span>
@@ -375,7 +399,8 @@
           My path into development came through infrastructure — which means I understand both sides of the stack.
         </p>
       </div>
-      <div class="timeline">
+
+      <!-- <div class="timeline">
 
         <div class="timeline__item">
           <div class="timeline__dot"></div>
@@ -390,7 +415,7 @@
               from system design to deployment.
             </p>
           </div>
-        </div>
+        </div> -->
 
         <div class="timeline__item">
           <div class="timeline__dot"></div>
@@ -531,5 +556,25 @@
   <script src="js/main.js"></script>
 
 </body>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hibrahim Onyango",
+  "alternateName": "Dev Ebrah",
+  "url": "https://devebrah.github.io/portfolio",
+  "jobTitle": "Full-Stack Developer & Systems Engineer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "Kenya"
+  },
+  "sameAs": [
+    "https://github.com/DevEbrah",
+    "https://www.linkedin.com/in/hibrahim-onyango-a076531a8"
+  ]
+}
+</script>
 
 </html>
