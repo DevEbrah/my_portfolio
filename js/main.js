@@ -84,9 +84,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Captcha validation — check if hCaptcha was completed
       const captchaResponse = form.querySelector('[name="h-captcha-response"]');
+      const captchaReminder = document.getElementById('captchaReminder');
+
       if (!captchaResponse || !captchaResponse.value) {
-        showFormFeedback(form, 'Please complete the captcha before sending.', 'error');
+        if (captchaReminder) {
+          captchaReminder.style.display = 'block';
+          setTimeout(() => {
+            captchaReminder.style.display = 'none';
+          }, 5000);
+        }
         return;
+      }
+
+      if (captchaReminder) {
+        captchaReminder.style.display = 'none';
       }
 
       // Show loading state
@@ -124,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  
+
   // ---- FORM FEEDBACK HELPER ----
   function showFormFeedback(form, message, type) {
     let feedback = form.querySelector('.form-feedback');
