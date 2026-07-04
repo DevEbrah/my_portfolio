@@ -381,3 +381,11 @@ a.contact__item:hover {
 .footer__logo-link:hover .footer__logo-img {
   opacity: 0.8;
 }
+
+.section__title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+  text-align: center;
+}
