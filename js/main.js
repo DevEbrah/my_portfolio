@@ -257,7 +257,7 @@ window.addEventListener('scroll', () => {
     // Auto hide after 15 seconds if not closed
     setTimeout(() => {
       whatsappPopup.classList.remove('visible');
-    }, 15000);
+    }, 10000);
   }
 
 }, { passive: true });
