@@ -4,6 +4,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---- PAGE LOADER ----
+  const loader = document.getElementById('pageLoader');
+  if (loader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        loader.classList.add('hidden');
+      }, 3800);
+    });
+  }
+
   // ---- NAV: Scroll shadow ----
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {

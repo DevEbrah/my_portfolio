@@ -54,6 +54,70 @@
 </head>
 
 <body>
+  <!-- ========== PAGE LOADER ========== -->
+  <div class="loader" id="pageLoader">
+    <div class="loader__grid"></div>
+
+    <!-- Particles -->
+    <div class="loader__particle" style="width:3px;height:3px;left:20%;bottom:10%;--dur:3s;--delay:0.5s"></div>
+    <div class="loader__particle" style="width:2px;height:2px;left:35%;bottom:5%;--dur:4s;--delay:1s"></div>
+    <div class="loader__particle" style="width:4px;height:4px;left:60%;bottom:15%;--dur:3.5s;--delay:0.2s"></div>
+    <div class="loader__particle" style="width:2px;height:2px;left:75%;bottom:8%;--dur:2.8s;--delay:1.5s"></div>
+    <div class="loader__particle" style="width:3px;height:3px;left:85%;bottom:20%;--dur:4.2s;--delay:0.8s"></div>
+    <div class="loader__particle" style="width:2px;height:2px;left:10%;bottom:25%;--dur:3.8s;--delay:0.3s"></div>
+
+    <div class="loader__content">
+
+      <!-- Rings -->
+      <div class="loader__ring-wrap">
+        <svg class="loader__ring-outer" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#1a1a1a" stroke-width="1" />
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#FF4500" stroke-width="1.5"
+            stroke-dasharray="40 20 10 50 5 100" stroke-linecap="round" />
+          <circle cx="60" cy="8" r="3" fill="#FF4500" opacity="0.8" />
+          <circle cx="112" cy="60" r="3" fill="#FF4500" opacity="0.6" />
+          <circle cx="60" cy="112" r="3" fill="#FF4500" opacity="0.4" />
+          <circle cx="8" cy="60" r="3" fill="#FF4500" opacity="0.6" />
+        </svg>
+        <svg class="loader__ring-inner" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="36" fill="none" stroke="#1a1a1a" stroke-width="1" />
+          <circle cx="60" cy="60" r="36" fill="none" stroke="rgba(255,69,0,0.4)" stroke-width="1"
+            stroke-dasharray="15 30 8 60" stroke-linecap="round" />
+        </svg>
+        <div class="loader__dot"></div>
+      </div>
+
+      <!-- Logo -->
+      <div class="loader__logo">Dev<span>Ebrah</span></div>
+      <p class="loader__tagline">Systems · Development · Infrastructure</p>
+
+      <!-- Code lines -->
+      <div class="loader__code">
+        <div class="loader__code-line">
+          <span class="loader__label">role</span>
+          <span class="loader__value orange">"Full-Stack Developer"</span>
+        </div>
+        <div class="loader__code-line">
+          <span class="loader__label">also</span>
+          <span class="loader__value orange">"Systems Engineer"</span>
+        </div>
+        <div class="loader__code-line">
+          <span class="loader__label">location</span>
+          <span class="loader__value">"Nairobi, Kenya"</span>
+        </div>
+        <div class="loader__code-line">
+          <span class="loader__label">status</span>
+          <span class="loader__value green">"loading_site..."</span>
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="loader__progress-wrap">
+        <div class="loader__progress-bar"></div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav" id="nav">
@@ -454,6 +518,8 @@
       <a href="Contact.html" class="btn btn--primary" style="display: inline-block;">
         Work With Me
       </a>
+      <a href="assets/DevEbrah-CV.pdf" download class="btn btn--outline">Download CV</a>
+
     </div>
   </section>
 
