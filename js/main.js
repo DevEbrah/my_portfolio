@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
       setTimeout(() => {
         loader.classList.add('hidden');
-      }, 3800);
+      }, 4000);
     });
   }
 
@@ -258,6 +258,18 @@ window.addEventListener('scroll', () => {
     setTimeout(() => {
       whatsappPopup.classList.remove('visible');
     }, 10000);
+  }
+
+  // ---- BACK TO TOP ----
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
 }, { passive: true });

@@ -30,9 +30,9 @@
 
   <title>Dev Ebrah | Full-Stack Developer, Network & Systems Administrator</title>
 
-  <!-- Favicon — replace with your actual logo file -->
-  <!-- <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" /> -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-1.png" />
+  <link rel="apple-touch-icon" href="assets/logo-1.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -88,7 +88,7 @@
       </div>
 
       <!-- Logo -->
-      <div class="loader__logo">Dev<span>Ebrah</span></div>
+      <img src="assets/logo-1.png" alt="Dev Ebrah" class="loader__logo-img" />
       <p class="loader__tagline">Systems · Development · Infrastructure</p>
 
       <!-- Code lines -->
@@ -122,11 +122,8 @@
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav" id="nav">
     <div class="nav__inner container">
-      <a href="#hero" class="nav__logo">
-        <!-- Logo image — remove the text below if you want image only -->
-        <!-- <img src="assets/logo.png" alt="Dev Ebrah Logo" class="nav__logo-img" /> -->
-        <!-- Text logo — remove this if you want image only -->
-        Dev<span class="accent">Ebrah</span>
+      <a href="index.html" class="nav__logo">
+        <img src="assets/logo-1.png" alt="Dev Ebrah Logo" class="nav__logo-img" />
       </a>
       <ul class="nav__links">
         <li><a href="#about">About</a></li>
@@ -528,13 +525,10 @@
     <div class="container footer__inner">
 
       <div class="footer__left">
-        <!-- Logo image — replace src with your actual logo file path -->
-        <!-- <a href="#hero" class="footer__logo-link">
+        <a href="index.html" class="footer__logo-link">
           <img src="assets/logo.png" alt="Dev Ebrah Logo" class="footer__logo-img" />
-        </a> -->
-        <!-- Keep the text logo as fallback or remove it if you prefer image only -->
-        <a href="#hero" class="nav__logo">Dev<span class="accent">Ebrah</span></a>
-        <p class="footer__tagline" style="text-align: left;">
+        </a>
+        <p class="footer__tagline">
           Ideas. Engineered.
         </p>
       </div>
@@ -593,6 +587,14 @@
       <i class="fa-brands fa-whatsapp"></i>
     </a>
   </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
 </body>
 

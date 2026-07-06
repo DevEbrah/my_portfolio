@@ -4,8 +4,17 @@
 
 /* ---- Keyframes ---- */
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; transform: scaleY(1); }
-  50%       { opacity: 1;   transform: scaleY(1.15); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1.15);
+  }
 }
 
 @keyframes fadeInUp {
@@ -13,6 +22,7 @@
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -20,28 +30,61 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes accentPulse {
-  0%, 100% { box-shadow: 0 0 12px rgba(255, 69, 0, 0.1); }
-  50%       { box-shadow: 0 0 28px rgba(255, 69, 0, 0.3); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 28px rgba(255, 69, 0, 0.3);
+  }
 }
 
 @keyframes greenPulse {
-  0%, 100% { box-shadow: 0 0 8px rgba(34, 197, 94, 0.2); }
-  50%       { box-shadow: 0 0 20px rgba(34, 197, 94, 0.5); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+  }
 }
 
 @keyframes textPulse {
-  0%, 100% { text-shadow: 0 0 8px rgba(255, 69, 0, 0.3); }
-  50%       { text-shadow: 0 0 16px rgba(255, 69, 0, 0.7); }
+
+  0%,
+  100% {
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.3);
+  }
+
+  50% {
+    text-shadow: 0 0 16px rgba(255, 69, 0, 0.7);
+  }
 }
 
 @keyframes whitePulse {
-  0%, 100% { box-shadow: 0 0 8px rgba(255, 255, 255, 0.1); }
-  50%       { box-shadow: 0 0 24px rgba(255, 255, 255, 0.35); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+  }
 }
 
 /* ---- Scroll-triggered reveal ---- */
@@ -57,27 +100,60 @@
 }
 
 /* Stagger children inside a reveal parent */
-.reveal-stagger > * {
+.reveal-stagger>* {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0ms;   opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(2) { transition-delay: 80ms;  opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible>*:nth-child(1) {
+  transition-delay: 0ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.visible>*:nth-child(2) {
+  transition-delay: 80ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.visible>*:nth-child(3) {
+  transition-delay: 160ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.visible>*:nth-child(4) {
+  transition-delay: 240ms;
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ---- Hero entrance ---- */
-.hero__content > * {
+.hero__content>* {
   animation: fadeInUp 0.7s ease both;
 }
 
-.hero__eyebrow   { animation-delay: 0.1s; }
-.hero__headline  { animation-delay: 0.2s; }
-.hero__sub       { animation-delay: 0.35s; }
-.hero__cta       { animation-delay: 0.5s; }
-.hero__availability { animation-delay: 0.6s; }
+.hero__eyebrow {
+  animation-delay: 0.1s;
+}
+
+.hero__headline {
+  animation-delay: 0.2s;
+}
+
+.hero__sub {
+  animation-delay: 0.35s;
+}
+
+.hero__cta {
+  animation-delay: 0.5s;
+}
+
+.hero__availability {
+  animation-delay: 0.6s;
+}
 
 .hero__visual {
   animation: fadeIn 0.8s ease 0.4s both;
@@ -85,19 +161,49 @@
 
 /* ---- Hero card accent pulse ---- */
 .hero__card {
-  animation:greenPulse 3s ease-in-out infinite;
+  animation: greenPulse 3s ease-in-out infinite;
 }
 
 /* ---- Reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
-  .reveal, .reveal-stagger > * {
+  .reveal,
+  .reveal-stagger>* {
     opacity: 1;
     transform: none;
+  }
+}
+
+@keyframes glowPulseNav {
+  from {
+    text-shadow:
+      0 0 8px rgba(255, 69, 0, 0.9),
+      0 0 20px rgba(255, 140, 0, 0.6),
+      0 0 40px rgba(255, 215, 0, 0.3);
+  }
+
+  to {
+    text-shadow:
+      0 0 12px rgba(255, 69, 0, 1),
+      0 0 30px rgba(255, 140, 0, 0.8),
+      0 0 60px rgba(255, 215, 0, 0.5);
+  }
+}
+
+@keyframes rainbowBarShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
   }
 }

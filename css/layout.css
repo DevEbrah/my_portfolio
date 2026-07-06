@@ -87,12 +87,11 @@ body {
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
 }
 
 .nav__logo-img {
-  width: 36px;      /* adjust to fit your logo */
-  height: 36px;
+  height: 100px;
+  width: auto;
   object-fit: contain;
   transition: opacity var(--transition-fast);
 }
@@ -109,13 +108,37 @@ body {
 
 .nav__links a {
   font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-text-muted);
-  transition: color var(--transition-fast);
+  font-weight: 600;
+  color: #666666;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position: relative;
 }
 
 .nav__links a:hover {
-  color: var(--color-text);
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(255, 69, 0, 0.9),
+    0 0 20px rgba(255, 140, 0, 0.6),
+    0 0 40px rgba(255, 215, 0, 0.3);
+  animation: glowPulseNav 1s ease-in-out infinite alternate;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF4500, #FFD700, #FF4500, transparent);
+  transition: left 0.3s ease, right 0.3s ease;
+  border-radius: 99px;
+}
+
+.nav__links a:hover::after {
+  left: 0;
+  right: 0;
 }
 
 .nav__toggle {
@@ -157,14 +180,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--color-accent),
-    var(--color-accent)
-  );
+  background: linear-gradient(to bottom,
+      transparent,
+      var(--color-accent),
+      var(--color-accent));
   border-radius: var(--radius-full);
-  box-shadow: 
+  box-shadow:
     0 0 6px var(--color-accent),
     0 0 12px var(--color-accent),
     0 0 20px rgba(255, 69, 0, 0.4);
@@ -172,13 +193,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--color-accent-hover),
-    var(--color-accent-hover)
-  );
-  box-shadow: 
+  background: linear-gradient(to bottom,
+      transparent,
+      var(--color-accent-hover),
+      var(--color-accent-hover));
+  box-shadow:
     0 0 8px var(--color-accent),
     0 0 16px var(--color-accent),
     0 0 30px rgba(255, 69, 0, 0.6),

@@ -372,15 +372,32 @@ a.contact__item:hover {
   font-family: var(--font-mono);
 }
 
-.footer__logo-img {
-  width: 80px;        /* change this to fit your logo size */
-  height: auto;
-  margin-bottom: var(--space-3);
+.footer__logo-link {
+  display: inline-block;
   transition: opacity var(--transition-fast);
 }
 
-.footer__logo-link:hover .footer__logo-img {
+.footer__logo-link:hover {
   opacity: 0.8;
+}
+
+.footer__logo-img {
+  height: 90px;
+  width: 90px;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(255, 69, 0, 0.3);
+  padding: 6px;
+  background: #111111;
+  transition: all var(--transition-base);
+}
+
+.footer__logo-link:hover .footer__logo-img {
+  border-color: var(--color-accent);
+  box-shadow:
+    0 0 12px rgba(255, 69, 0, 0.4),
+    0 0 24px rgba(255, 69, 0, 0.2);
+  transform: rotate(5deg) scale(1.05);
 }
 
 .section__title {
