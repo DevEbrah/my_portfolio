@@ -243,18 +243,24 @@ window.addEventListener('scroll', () => {
   const whatsappPopup = document.getElementById('whatsappPopup');
   const whatsappClose = document.getElementById('whatsappClose');
 
-  if (whatsappPopup) {
+  if (whatsappPopup && !sessionStorage.getItem('whatsappPopupShown')) {
+
+    // Mark popup as shown for this session
+    sessionStorage.setItem('whatsappPopupShown', 'true');
+
     // Show popup after 3 seconds
     setTimeout(() => {
       whatsappPopup.classList.add('visible');
     }, 3000);
 
     // Close button
-    whatsappClose.addEventListener('click', () => {
-      whatsappPopup.classList.remove('visible');
-    });
+    if (whatsappClose) {
+      whatsappClose.addEventListener('click', () => {
+        whatsappPopup.classList.remove('visible');
+      });
+    }
 
-    // Auto hide after 15 seconds if not closed
+    // Automatically hide popup after 10 seconds
     setTimeout(() => {
       whatsappPopup.classList.remove('visible');
     }, 10000);
